@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoLight from "../public/onlinelogomaker-051023-1804-7951.png";
+import logoLight from "../public/lightlogo.png";
 import {
   BsFacebook,
   BsTwitter,
