@@ -9,7 +9,7 @@ const BannerBottom = () => {
       <div className="w-full lg:w-[60%] flex flex-col gap-3">
 
         <h3 className="font-bold text-xl md:text-3xl">
-          Welcome to Yeasin's Blog
+          Welcome to Yeasin's Portfolio
         </h3>
 
       </div>
