@@ -68,7 +68,7 @@ const Post = ({ post }: Props) => {
                                     </a>
                                 ),
                                 image: (props: any) => (
-                                    <img src={urlFor(props).url()!} className="w-full mx-auto p-10
+                                    <img src={urlFor(props).url()!} className="w-100 mx-auto p-10
                                      h" />
 
                                 )
