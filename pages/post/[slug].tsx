@@ -11,6 +11,7 @@ interface Props {
 }
 
 const Post = ({ post }: Props) => {
+    console.log(post.body);
     return (
         <div >
             <Header />
@@ -20,7 +21,7 @@ const Post = ({ post }: Props) => {
                     <div>
                         <h1 className='font-titleFont font-medium text-[40px] text-primary border-b-[2px] border-b-cyan-800 mt-10 mb-3 text-center'>{post.title}</h1>
 
-                        <p className='font-bodyFont text-sm '>Published at {new Date(post.publishedAt).toLocaleDateString()}</p>
+                        <p className='font-bodyFont text-sm text-right '>Published at {new Date(post.publishedAt).toLocaleDateString()}</p>
                     </div>
                     <div className='mt-10'>
                         <PortableText
@@ -31,19 +32,25 @@ const Post = ({ post }: Props) => {
                             serializers={{
                                 h1: (props: any) => (
                                     <h1
-                                        className='text-3xl font-bold font-titleFont'
+                                        className='text-3xl font-bold font-titleFont text-center  '
                                         {...props}
                                     />
                                 ),
                                 h2: (props: any) => (
                                     <h2
-                                        className='text-2xl font-bold my-5 font-titleFont'
+                                        className='text-2xl font-bold my-5 font-titleFont text-center'
                                         {...props}
                                     />
                                 ),
                                 h3: (props: any) => (
                                     <h3
-                                        className='text-xl font-bold my-5 font-titleFont'
+                                        className='text-2xl  my-5 font-titleFont text-left'
+                                        {...props}
+                                    />
+                                ),
+                                normal: (props: any) => (
+                                    <p
+                                        className='text-sm my-5 font-titleFont text-justify'
                                         {...props}
                                     />
                                 ),
@@ -60,6 +67,13 @@ const Post = ({ post }: Props) => {
                                         {children}
                                     </a>
                                 ),
+                                image: (props: any) => (
+                                    <img src={urlFor(props).url()!} className="w-full mx-auto p-10
+                                     h" />
+
+                                )
+
+
                             }}
                         />
                     </div>
