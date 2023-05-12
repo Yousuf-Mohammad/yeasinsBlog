@@ -34,11 +34,11 @@ export default function Home({ posts }: Props) {
         </div>
         {/* ============ Banner-Bottom End here ======= */}
         {/* ============ Post Part Start here ========= */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 my-2 py-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 px-4 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 my-2 py-6">
           {posts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div className="border-[1px] border-primaryColor border-opacity-40 rounded  h-[450px] group shadow-xl">
-                <div className="h-4/5 w-full overflow-hidden">
+                <div className="h-4/6 w-full overflow-hidden">
                   <Image
                     width={380}
                     height={350}
@@ -46,7 +46,7 @@ export default function Home({ posts }: Props) {
                     className="w-full h-full object-cover brightness-75 group-hover:brightness-100 duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="h-1/5 w-full text-center px-4 py-5">
+                <div className="h-1/6 w-full text-center px-4 py-5">
                   <h2 className="text-xl font-bold">{post.title}</h2>
                   {/* <hr /><hr />
                   <p>Published at {new Date(post.publishedAt).toLocaleDateString()}</p> */}

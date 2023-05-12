@@ -15,16 +15,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-center items-center md:justify-between">
         <div className="flex items-center gap-3">
           <Image src={logoLight} width={200} height={200} alt="logo" />
-          <p className="flex items-center text-sm font-titleFont gap-1">
+          <p className="flex lg:items-center  text-sm  gap-1">
             <AiOutlineCopyrightCircle className="mt-[1px]" />
-            Designed and developed by <a href="https://yousuf-mohamad.netlify.app/">Yousuf Mohammad</a>
+            Designed and developed by yousuf
           </p>
         </div>
 
         <div className="flex gap-6">
           <BsYoutube className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsFacebook className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-
+          <a href="https://www.facebook.com/yeasin.mohammad.948" target="_blank"><BsFacebook className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
+          </a>
           <BsLinkedin className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
           <BsTwitter className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
         </div>
